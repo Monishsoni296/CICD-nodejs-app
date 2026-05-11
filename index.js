@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Basic API route for video metadata
+app.get('/', (req, res) => {
+  res.redirect('/api/videos');
+});
+
 app.get('/api/videos', (req, res) => {
   res.json([
     { id: 1, title: 'Introduction to CI/CD', author: 'DevOps Master', views: '1.2M' },
