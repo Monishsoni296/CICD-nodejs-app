@@ -47,6 +47,6 @@ jobs:
                   registryPassword: ${{ secrets.DOCKERHUB_PASSWORD }}
                   resourceGroup: rg-serverless-project
                   containerAppName: node-app-serverless
-                  containerAppEnvironment: my-environment
+                  containerAppEnvironment: my-environment01
                   location: eastus
                   targetPort: 3000
