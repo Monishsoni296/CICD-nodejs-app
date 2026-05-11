@@ -45,7 +45,6 @@ jobs:
                   registryUrl: docker.io
                   registryUsername: ${{ secrets.DOCKERHUB_USERNAME }}
                   registryPassword: ${{ secrets.DOCKERHUB_PASSWORD }}
-                  appSourcePath: ${{ github.workspace }}
                   resourceGroup: rg-serverless-project
                   containerAppName: node-app-serverless
                   containerAppEnvironment: my-environment
