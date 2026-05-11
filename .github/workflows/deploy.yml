@@ -44,5 +44,6 @@ jobs:
                   imageToDeploy: ${{ secrets.DOCKERHUB_USERNAME }}/cicd-app:latest
                   containerAppName: node-app-serverless
                   resourceGroup: rg-serverless-project
+                  containerAppEnvironment: my-environment
                   location: eastus
                   targetPort: 3000
