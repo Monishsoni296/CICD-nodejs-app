@@ -41,13 +41,13 @@ jobs:
             - name: Deploy to Container App
               uses: azure/container-apps-deploy-action@v1
               with:
-                  imageToDeploy: ${{ secrets.DOCKERHUB_USERNAME }}/cicd-app:latest
-                  appSourcePath: ${{ github.workspace }}
-                  containerAppName: node-app-serverless
-                  resourceGroup: rg-serverless-project
-                  containerAppEnvironment: my-environment
+                  imageToDeploy: docker.io/${{ secrets.DOCKERHUB_USERNAME }}/nodejs-cicd-app:latest
                   registryUrl: docker.io
                   registryUsername: ${{ secrets.DOCKERHUB_USERNAME }}
                   registryPassword: ${{ secrets.DOCKERHUB_PASSWORD }}
+                  appSourcePath: ${{ github.workspace }}
+                  resourceGroup: rg-serverless-project
+                  containerAppName: node-app-serverless
+                  containerAppEnvironment: my-environment
                   location: eastus
                   targetPort: 3000
